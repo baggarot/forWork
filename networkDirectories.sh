@@ -11,7 +11,7 @@ chmod 711 /home/$var/.smbcredentials
 [ ! -d "/media/catalog1" ] && mkdir -m 777 /media/catalog1
 [ ! -d "/media/catalog2" ] && mkdir -m 777 /media/catalog2
 [ ! -d "/media/catalog3" ] && mkdir -m 777 /media/catalog3
-chown -R $var /media/ksvn /media/gsnsrv /media/dsl
+chown -R $var /media/catalog1 /media/catalog2 /media/catalog3
 
 if ! grep -qwF '//share.domain/share' "/etc/fstab"; then
 	echo //share.domain/share	/media/catalog1	cifs	x-systemd.automount,credentials=/home/NSO.LOC/$var/.smbcredentials,rw,$i,iocharset=utf8,file_mode=0777,dir_mode=0777,nofail,_netdev	0	0 >> /etc/fstab
